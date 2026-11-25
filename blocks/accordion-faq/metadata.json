@@ -1,0 +1,40 @@
+{
+  "variantName": "accordion-faq",
+  "baseBlock": "accordion",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "text",
+    "purpose": "A list of FAQ questions that expand to reveal their answers"
+  },
+  "contentPattern": {
+    "rows": "one row per question",
+    "cells": [
+      {
+        "name": "Question",
+        "content": "question text (plain text or a heading)"
+      },
+      {
+        "name": "Answer",
+        "content": "rich text answer, or a single link to a /fragments/ page to load complex content"
+      }
+    ],
+    "structure": "one row per question; cell 1 = question text, cell 2 = answer (rich text, or a single link to a /fragments/ page to load complex content such as nested blocks)"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_0a508ad4bccb"
+  ],
+  "usage": {
+    "description": "FAQ sections: short questions with a rich-text answer revealed on click, marked by a plus/minus toggle and divider rules between items.",
+    "pagesUsing": [
+      "/eds/index"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-25"
+  },
+  "reuseGuidance": "Use for any collapsible question/answer list. For complex answers (images, nested blocks), author the answer in a fragment and put a single link to it in the answer cell."
+}

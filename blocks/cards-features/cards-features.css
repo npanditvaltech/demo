@@ -1,0 +1,95 @@
+/* cards-features: values from source computed styles (see migration-work/cards-features-extracted.css) */
+.cards-features > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.cards-features .cards-features-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.cards-features .cards-features-card-body > :first-child {
+  margin-top: 0;
+}
+
+.cards-features .cards-features-card-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.cards-features .cards-features-card-title {
+  font-size: var(--heading-font-size-l);
+}
+
+.cards-features .cards-features-card-body p {
+  color: var(--color-muted);
+}
+
+/* option: numbered steps with a rule above each step */
+.cards-features.numbered-steps-top-rule > ul {
+  gap: 1.5rem;
+}
+
+.cards-features.numbered-steps-top-rule .cards-features-card {
+  border-top: 3px solid var(--color-ink);
+  padding-top: 1rem;
+}
+
+.cards-features.numbered-steps-top-rule .cards-features-card-body p {
+  margin-top: 0.5rem;
+}
+
+.cards-features.numbered-steps-top-rule .cards-features-card-body p.cards-features-card-eyebrow {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+/* default: bordered surface strip, cards separated by dividers */
+.cards-features:not(.numbered-steps-top-rule) {
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background-color: var(--color-surface);
+}
+
+.cards-features:not(.numbered-steps-top-rule) .cards-features-card {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.cards-features:not(.numbered-steps-top-rule) .cards-features-card:last-child {
+  border-bottom: 0;
+}
+
+.cards-features:not(.numbered-steps-top-rule) .cards-features-card-body {
+  padding: 1.75rem;
+}
+
+.cards-features:not(.numbered-steps-top-rule) .cards-features-card-body p {
+  margin-top: 0.6rem;
+}
+
+@media (width >= 900px) {
+  .cards-features > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cards-features:not(.numbered-steps-top-rule) .cards-features-card {
+    border-bottom: 0;
+    border-right: 1px solid var(--color-line);
+  }
+
+  .cards-features:not(.numbered-steps-top-rule) .cards-features-card:last-child {
+    border-right: 0;
+  }
+}

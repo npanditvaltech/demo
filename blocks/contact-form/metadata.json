@@ -1,0 +1,48 @@
+{
+  "variantName": "contact-form",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + text + link + field + button",
+    "purpose": "Intro text beside a contact form with labelled fields and a submit button"
+  },
+  "contentPattern": {
+    "rows": "first row is the intro; then one row per form field; one submit row; optional config rows",
+    "cells": [
+      {
+        "name": "Intro (row 1)",
+        "content": "heading, short text, contact email link"
+      },
+      {
+        "name": "Field row",
+        "content": "Label | type (text, email, tel, url, number, textarea, select, checkbox) | optional 'required' or select choices"
+      },
+      {
+        "name": "Submit row",
+        "content": "Button label | submit"
+      },
+      {
+        "name": "Config rows",
+        "content": "action | endpoint URL (POST JSON); success | thank-you message; error | failure message"
+      }
+    ],
+    "structure": "row 1 = intro (heading, text, email link); then one row per field as 'Label | type | required' (types: text, email, tel, url, number, textarea, select, checkbox; for select put the choices in cell 3); a 'Button label | submit' row; optional config rows 'action | endpoint URL' (POST JSON), 'success | message', 'error | message'. Without an action row nothing is sent"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_29b68e28eea2"
+  ],
+  "usage": {
+    "description": "Contact / enquiry section: heading, a line of supporting text and an email link on the left; a carded form with Name, Work email and Message fields and a full-width Send message button on the right.",
+    "pagesUsing": [
+      "/eds/index"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-25"
+  },
+  "reuseGuidance": "Use for simple lead or contact forms. Without an 'action' row the form validates and shows the success message but sends nothing; add an 'action' row pointing to the form endpoint before go-live."
+}

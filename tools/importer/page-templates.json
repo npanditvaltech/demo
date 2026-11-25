@@ -1,0 +1,111 @@
+{
+  "templates": [
+    {
+      "name": "eds",
+      "urls": [
+        "https://npanditvaltech.github.io/eds/"
+      ],
+      "representativeUrl": "https://npanditvaltech.github.io/eds/",
+      "description": "Single-page marketing home page: health-check hero, feature strip, how-it-works steps, FAQ and contact form",
+      "blocks": [
+        {
+          "name": "hero-health-check",
+          "instances": [
+            "section.hero .hero-grid"
+          ]
+        },
+        {
+          "name": "cards-features",
+          "instances": [
+            "#features .features",
+            "#how ol.steps"
+          ]
+        },
+        {
+          "name": "accordion-faq",
+          "instances": [
+            "#faq .faq"
+          ]
+        },
+        {
+          "name": "contact-form",
+          "instances": [
+            "#contact .contact-grid"
+          ]
+        }
+      ],
+      "urlPattern": "/*",
+      "sections": [
+        {
+          "id": "rc2",
+          "name": "hero",
+          "selector": [
+            "section.hero"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-health-check"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc3",
+          "name": "features",
+          "selector": [
+            "section#features"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-features"
+          ],
+          "defaultContent": [
+            "#features .sec-head"
+          ]
+        },
+        {
+          "id": "rc4",
+          "name": "how-it-works",
+          "selector": [
+            "section#how"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-features"
+          ],
+          "defaultContent": [
+            "#how .sec-head"
+          ]
+        },
+        {
+          "id": "rc5",
+          "name": "faq",
+          "selector": [
+            "section#faq"
+          ],
+          "style": null,
+          "blocks": [
+            "accordion-faq"
+          ],
+          "defaultContent": [
+            "#faq .sec-head"
+          ]
+        },
+        {
+          "id": "rc6",
+          "name": "contact",
+          "selector": [
+            "section#contact"
+          ],
+          "style": null,
+          "blocks": [
+            "contact-form"
+          ],
+          "defaultContent": []
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "projectType": "da"
+  }
+}

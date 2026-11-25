@@ -1,0 +1,74 @@
+/* brand tokens migrated from https://npanditvaltech.github.io/eds/ (light + dark theme) */
+:root {
+  /* source palette */
+  --color-bg: #f1f4f6;
+  --color-surface: #fff;
+  --color-ink: #10212f;
+  --color-muted: #4c5e6c;
+  --color-line: #d3dbe1;
+  --color-accent: #2b59ff;
+  --color-accent-ink: #fff;
+  --color-good: #0e8a5f;
+  --color-bad: #b3261e;
+
+  /* EDS names mapped to the palette */
+  --background-color: var(--color-bg);
+  --light-color: var(--color-surface);
+  --dark-color: var(--color-muted);
+  --text-color: var(--color-ink);
+  --link-color: var(--color-ink);
+  --link-hover-color: var(--color-ink);
+
+  /* fonts */
+  --body-font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+  --heading-font-family: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
+
+  /* body sizes */
+  --body-font-size-m: 1.0625rem;
+  --body-font-size-s: 1rem;
+  --body-font-size-xs: 0.95rem;
+
+  /* heading sizes (fluid, as on the source) */
+  --heading-font-size-xxl: clamp(2.4rem, 6vw, 4.4rem);
+  --heading-font-size-xl: clamp(1.7rem, 3.5vw, 2.5rem);
+  --heading-font-size-l: 1.25rem;
+  --heading-font-size-m: 1.15rem;
+  --heading-font-size-s: 1rem;
+  --heading-font-size-xs: 0.95rem;
+
+  /* layout */
+  --content-width: min(1120px, 100% - 2.5rem);
+  --section-padding: clamp(3rem, 7vw, 5.5rem);
+  --hero-padding: clamp(3rem, 8vw, 6rem);
+  --radius-card: 14px;
+  --radius-control: 8px;
+
+  /* nav height */
+  --nav-height: 65px;
+}
+
+:root[data-theme='dark'] {
+  --color-bg: #0c1822;
+  --color-surface: #13242f;
+  --color-ink: #e8eef2;
+  --color-muted: #9aaab6;
+  --color-line: #25394a;
+  --color-accent: #7c9bff;
+  --color-accent-ink: #0c1822;
+  --color-good: #4fd1a1;
+  --color-bad: #ff8a80;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --color-bg: #0c1822;
+    --color-surface: #13242f;
+    --color-ink: #e8eef2;
+    --color-muted: #9aaab6;
+    --color-line: #25394a;
+    --color-accent: #7c9bff;
+    --color-accent-ink: #0c1822;
+    --color-good: #4fd1a1;
+    --color-bad: #ff8a80;
+  }
+}

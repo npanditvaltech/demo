@@ -1,20 +1,48 @@
+/* footer palette (light), matching the source site; dark values below */
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  --footer-muted: #4c5e6c;
+  --footer-line: #d3dbe1;
+  --footer-font: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+
+  border-top: 1px solid var(--footer-line);
+  padding: 2rem 0;
+  background: transparent;
+  color: var(--footer-muted);
+  font: 400 0.95rem/1.6 var(--footer-font);
 }
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+:root[data-theme='dark'] footer {
+  --footer-muted: #9aaab6;
+  --footer-line: #25394a;
 }
 
-footer .footer p {
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) footer {
+    --footer-muted: #9aaab6;
+    --footer-line: #25394a;
+  }
+}
+
+footer .footer-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  width: min(1120px, 100% - 2.5rem);
+  margin-inline: auto;
+}
+
+footer .footer-bar p {
   margin: 0;
 }
 
-@media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
-  }
+footer .footer-bar a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+footer .footer-bar a:focus-visible {
+  outline: 3px solid #2b59ff;
+  outline-offset: 3px;
+  border-radius: 4px;
 }
