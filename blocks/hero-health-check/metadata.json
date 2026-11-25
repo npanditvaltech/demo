@@ -1,0 +1,44 @@
+{
+  "variantName": "hero-health-check",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + text + link + button + icon",
+    "purpose": "Page-opening hero with headline, intro text and CTAs beside an interactive 'page health check' panel of score gauges"
+  },
+  "contentPattern": {
+    "rows": "row 1 holds copy and panel; each further row is one gauge metric",
+    "cells": [
+      {
+        "name": "Copy (row 1, cell 1)",
+        "content": "h1 headline, intro paragraph, CTA links (bold link = primary button, italic link = secondary)"
+      },
+      {
+        "name": "Panel (row 1, cell 2)",
+        "content": "panel title heading, run-button label as a bold paragraph, note paragraph"
+      },
+      {
+        "name": "Metric rows",
+        "content": "metric label | target score 0-100 (e.g. Performance | 100)"
+      }
+    ],
+    "structure": "row 1 = copy cell (h1 headline, intro paragraph, CTA links) and panel cell (title heading, run-button label as a bold paragraph, note paragraph); each further row is one gauge as 'Metric label | target score 0-100' (e.g. 'Performance | 100'). Omit the panel cell and metric rows for a copy-only hero"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_759f918ca6a8"
+  ],
+  "usage": {
+    "description": "Home page hero: large headline, supporting paragraph and two CTA buttons on the left; a carded 'Page health check' demo on the right with a Run check button, four circular score gauges (Performance, Accessibility, Best practice, SEO) and a short note.",
+    "pagesUsing": [
+      "/eds/index"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-25"
+  },
+  "reuseGuidance": "Use where a hero needs an interactive score demo. For a plain headline hero use the base hero block. Omit the panel cell and metric rows to get a copy-only hero."
+}

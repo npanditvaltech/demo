@@ -1,0 +1,46 @@
+{
+  "variantName": "cards-features",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + text",
+    "purpose": "A row of short feature or step cards, each with a title and a short description and no image"
+  },
+  "contentPattern": {
+    "rows": "one row per card",
+    "cells": [
+      {
+        "name": "Body",
+        "content": "optional eyebrow paragraph (e.g. 'Step 1'), title as a heading, description paragraph"
+      },
+      {
+        "name": "Image",
+        "content": "optional image cell (not used on the source page)"
+      }
+    ],
+    "structure": "one row per card; one cell holding an optional eyebrow paragraph (e.g. 'Step 1'), the title as a heading and a description paragraph; an optional image cell is supported"
+  },
+  "options": [
+    {
+      "class": "numbered-steps-top-rule",
+      "label": "Numbered Steps Top Rule"
+    }
+  ],
+  "memberVariantIds": [
+    "v_ae5efeabbd77",
+    "v_01bbb8bc6f5e"
+  ],
+  "usage": {
+    "description": "Default: a bordered strip of three feature cards (title + description) separated by vertical dividers. With 'numbered-steps-top-rule': a process sequence where each card has a 'Step N' eyebrow, a title and text, under a thick top rule.",
+    "pagesUsing": [
+      "/eds/index"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-25"
+  },
+  "reuseGuidance": "Use for text-only feature highlights or numbered process steps. Use the base cards block when cards carry images; use columns for free-form side-by-side content."
+}

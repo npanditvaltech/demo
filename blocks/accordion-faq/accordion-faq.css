@@ -1,0 +1,61 @@
+/* accordion-faq: values from the source #faq .faq computed styles */
+.accordion-faq {
+  max-width: 44rem;
+  color: var(--color-ink);
+}
+
+.accordion-faq details {
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.accordion-faq details summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-m);
+  font-weight: 700;
+  line-height: normal;
+}
+
+.accordion-faq details summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-faq details summary::after {
+  content: '+';
+  font-size: 1.5rem;
+  line-height: 1;
+  transition: transform 0.2s;
+}
+
+.accordion-faq details[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.accordion-faq details summary:focus-visible {
+  outline: 2px solid currentcolor;
+  outline-offset: 2px;
+}
+
+.accordion-faq .accordion-faq-item-body {
+  margin-top: 0.75rem;
+  color: var(--color-muted);
+}
+
+.accordion-faq .accordion-faq-item-body > * {
+  margin: 0.75rem 0 0;
+}
+
+.accordion-faq .accordion-faq-item-body > :first-child {
+  margin-top: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accordion-faq details summary::after {
+    transition: none;
+  }
+}

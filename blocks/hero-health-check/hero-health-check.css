@@ -1,0 +1,130 @@
+/* hero-health-check: values from the source .hero-grid / .meter / .rings */
+.hero-health-check {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* copy column */
+.hero-health-check .hero-health-check-content > p {
+  max-width: 34rem;
+  margin: 1.5rem 0 2rem;
+  font-size: 1.25rem;
+  color: var(--color-muted);
+}
+
+.hero-health-check .hero-health-check-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.hero-health-check .hero-health-check-actions > p {
+  margin: 0;
+}
+
+/* meter card */
+.hero-health-check .hero-health-check-panel {
+  padding: 1.5rem;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+}
+
+.hero-health-check .hero-health-check-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.hero-health-check .hero-health-check-panel-title {
+  margin: 0;
+  font-size: var(--heading-font-size-m);
+}
+
+.hero-health-check .hero-health-check-run {
+  margin: 0;
+}
+
+.hero-health-check .hero-health-check-run:disabled {
+  cursor: progress;
+}
+
+/* rings */
+.hero-health-check .hero-health-check-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-health-check .hero-health-check-metric {
+  text-align: center;
+}
+
+/* the source svg is inline, leaving a 9.2px line-box gap below it; made explicit
+   so the number and label offsets do not depend on the document's line-height mode */
+.hero-health-check .hero-health-check-gauge svg {
+  display: block;
+  width: 100%;
+  max-width: 84px;
+  margin: 0 auto 9.2px;
+  transform: rotate(-90deg);
+}
+
+.hero-health-check .hero-health-check-gauge circle {
+  fill: none;
+  stroke-width: 8;
+}
+
+.hero-health-check .hero-health-check-gauge-track {
+  stroke: var(--color-line);
+}
+
+.hero-health-check .hero-health-check-gauge-progress {
+  stroke: var(--color-accent);
+  stroke-linecap: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: calc(100 - var(--score, 0));
+}
+
+.hero-health-check .hero-health-check-gauge-value {
+  display: grid;
+  place-items: center;
+  height: 3.6rem;
+  margin-top: -3.6rem;
+  font: 700 1.3rem var(--heading-font-family);
+}
+
+.hero-health-check .hero-health-check-metric-label {
+  display: block;
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.hero-health-check .hero-health-check-note {
+  min-height: 1.6rem;
+  margin-top: 1.25rem;
+  font-size: var(--body-font-size-xs);
+  color: var(--color-muted);
+}
+
+.hero-health-check .hero-health-check-note > * {
+  margin: 0;
+}
+
+@media (width >= 900px) {
+  .hero-health-check {
+    grid-template-columns: 1.15fr 1fr;
+  }
+
+  .hero-health-check.no-panel {
+    grid-template-columns: 1fr;
+  }
+}
