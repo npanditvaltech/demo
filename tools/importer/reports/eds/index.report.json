@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://npanditvaltech.github.io/eds/",
+  "path": "eds/index",
+  "timestamp": "2026-11-25T11:37:32.903Z",
+  "title": "EDS – Fast websites, simple authoring",
+  "template": "eds",
+  "blocks": [
+    "hero-health-check",
+    "cards-features",
+    "cards-features",
+    "accordion-faq",
+    "contact-form"
+  ],
+  "importScript": "5dbf8062263b"
+}
